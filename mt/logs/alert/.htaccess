@@ -1,0 +1,25 @@
+Header set Access-Control-Allow-Origin "https://127.0.0.1"
+ErrorDocument 404 /new404.html
+
+
+<IfModule mod_rewrite.c>
+	RewriteEngine Off
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteRule ^([^\.]+)$ $index.php [NC,L]
+	php_flag display_errors on
+</IfModule>
+
+
+
+<IfModule mod_headers.c>
+   Header unset ETag
+   Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+   Header set Pragma "no-cache"
+   Header set Expires "Wed, 12 Jan 1980 05:00:00 GMT"
+   Header set Referrer-Policy "DENY"
+   Header set Feature-Policy "geolocation 'self'; vibrate 'none'"
+   Header edit Set-Cookie ^(.*)$ $1;samesite=lux;HttpsOnly;Secure
+</IfModule>
+
+

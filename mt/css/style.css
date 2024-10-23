@@ -1,0 +1,47 @@
+﻿body
+{
+	font-family: 'Exo', sans-serif;
+                     
+}
+#logInSuccess
+{
+ display:none;
+}
+
+#logInError
+{
+	display:none;
+}
+
+#captchaError
+{
+	display:none
+}
+#token
+{
+	display:none
+}
+#emptyLogInError
+{
+	display:none;
+}
+
+#emptyTokenInError
+{
+	display:none;
+}
+
+#num-m
+{
+	display:none
+}
+#footer1 {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
